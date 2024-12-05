@@ -1,4 +1,4 @@
-class CreateCafes < ActiveRecord::Migration
+class CreateCafes < ActiveRecord::Migration[7.2]
   def change
     create_table :cafes do |t|
     	t.string :email, null:false, limit:50

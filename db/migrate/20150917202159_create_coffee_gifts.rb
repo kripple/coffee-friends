@@ -1,4 +1,4 @@
-class CreateCoffeeGifts < ActiveRecord::Migration
+class CreateCoffeeGifts < ActiveRecord::Migration[7.2]
   def change
     create_table :coffee_gifts do |t|
     	t.references :giver
