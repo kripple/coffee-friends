@@ -24,6 +24,33 @@ Coffee Friends was built in 2015 as the capstone project for the [Dev Bootcamp](
 - [Travis Allen](https://github.com/trallen91)
 - [Jerry Chai](https://github.com/jchai002)
 
-<!-- ### Deployment -->
+### Local Development
 
+Instructions for macOS.
 
+#### Install Dependencies
+
+```Bash
+brew install rbenv ruby-build
+cat .ruby-version | rbenv install
+# append the following to .bash_profile with `rbenv init`
+eval "$(rbenv init -)"
+```
+
+```Bash
+sudo gem install bundler
+
+brew install libpq
+# append to .bash_profile with:
+# echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.bash_profile
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+gem install pg
+
+bundle install
+```
+
+#### Serve locally
+
+```Bash
+rails server
+```
