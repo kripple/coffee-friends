@@ -38,14 +38,19 @@ eval "$(rbenv init -)"
 ```
 
 ```Bash
-sudo gem install bundler
-
 brew install libpq
 # append to .bash_profile with:
 # echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.bash_profile
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-gem install pg
+```
 
+```Bash
+# bundle doesn't know where to install gems otherwise
+# append to .bash_profile with:
+# echo 'export GEM_HOME=$(ruby -e 'puts Gem.user_dir')' >> ~/.bash_profile
+export GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+
+sudo gem install bundler
 bundle install
 ```
 
