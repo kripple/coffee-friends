@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '7.2.0'
+gem 'rails', '~> 6.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -41,21 +41,20 @@ gem 'ransack'
 gem 'braintree'
 
 # styles framework
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 6.9.0'
+gem 'autoprefixer-rails'
 
-gem 'foundation_rails_helper'
+gem 'foundation_rails_helper', '~> 4.0.0'
 
-gem 'factory_girl_rails'
+# gem 'factory_bot_rails'
 
 gem 'gon'
 
 #cloud image upload support
 gem 'cloudinary'
 
-group :development do
-	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-	gem 'spring'
-end
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem "spring", group: :development
 
 # allows for secure storage of env vars
 gem 'figaro'
