@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2015_09_23_005117) do
+ActiveRecord::Schema.define(version: 2015_09_23_005117) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,8 +22,8 @@ ActiveRecord::Schema[7.2].define(version: 2015_09_23_005117) do
     t.string "password_digest", null: false
     t.string "borough"
     t.string "neighborhood"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
     t.string "slug"
   end
@@ -36,8 +37,8 @@ ActiveRecord::Schema[7.2].define(version: 2015_09_23_005117) do
     t.text "message"
     t.string "phone"
     t.string "redemption_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
     t.index ["giver_id"], name: "index_coffee_gifts_on_giver_id"
     t.index ["menu_item_id"], name: "index_coffee_gifts_on_menu_item_id"
@@ -48,8 +49,8 @@ ActiveRecord::Schema[7.2].define(version: 2015_09_23_005117) do
     t.bigint "cafe_id"
     t.string "name", limit: 30, null: false
     t.float "price", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["cafe_id"], name: "index_menu_items_on_cafe_id"
   end
 
@@ -60,8 +61,9 @@ ActiveRecord::Schema[7.2].define(version: 2015_09_23_005117) do
     t.string "email", limit: 50, null: false
     t.string "phone", null: false
     t.string "password_digest", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
   end
+
 end

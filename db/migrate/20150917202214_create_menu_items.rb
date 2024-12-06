@@ -1,4 +1,4 @@
-class CreateMenuItems < ActiveRecord::Migration[7.2]
+class CreateMenuItems < ActiveRecord::Migration[6.1]
   def change
     create_table :menu_items do |t|
     	t.references :cafe
